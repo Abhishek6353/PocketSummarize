@@ -1,0 +1,41 @@
+All-MiniLM-L6-v2 (converted Core ML package) — license & attribution
+
+Original model:
+  sentence-transformers/all-MiniLM-L6-v2
+  Hugging Face model page: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+
+This converted Core ML model was produced from the original weights and is provided here
+as a redistributed derivative. The original model's license applies. The original
+model is distributed under the Apache License, Version 2.0.
+
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+(Full license text omitted for brevity - include the full Apache-2.0 text in production)
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the License for the specific language governing permissions
+and limitations under the License.
+
+Attribution requirement:
+  - Preserve this file and the license text when redistributing the converted model.
+  - Include a link to the original source (Hugging Face model page).
+  - Do not remove copyright or license notices from the original model.
+
+Note about training data:
+  - The original model was trained on public datasets; some underlying datasets may
+    have additional terms or usage considerations. Users should review the original
+    model card and dataset licenses before using the model for commercial or regulated use.
+
+Contact / provenance:
+  - Converted by: <Your name or GitHub handle>
+  - Conversion script: Scripts/convert_minilm_to_coreml.py
+  - Conversion environment hints: coremltools 7.0.0, torch 2.0.0, numpy 1.23.x
+  - Output format: Core ML ML Program (.mlpackage) (or .mlmodel if you produced that)

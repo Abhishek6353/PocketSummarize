@@ -1,0 +1,15 @@
+{
+  "originHash" : "f657cb0a4e2c7b63f20689e77b9856ab91b2797605393bfd9aaacb9e95fd03b8",
+  "pins" : [
+    {
+      "identity" : "swiftllama",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ShenghaiWang/SwiftLlama.git",
+      "state" : {
+        "revision" : "469310012506c307f3f6800d9c5f31e670ff068d",
+        "version" : "0.4.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		18C98C562EDEBF140064BACA /* SwiftLlama in Frameworks */ = {isa = PBXBuildFile; productRef = 18C98C552EDEBF140064BACA /* SwiftLlama */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		18C98C3B2EDEB5FC0064BACA /* PocketSummarize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketSummarize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C98C562EDEBF140064BACA /* SwiftLlama in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = PocketSummarize;
 			packageProductDependencies = (
+				18C98C552EDEBF140064BACA /* SwiftLlama */,
 			);
 			productName = PocketSummarize;
 			productReference = 18C98C3B2EDEB5FC0064BACA /* PocketSummarize.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 18C98C322EDEB5FC0064BACA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18C98C542EDEBF140064BACA /* XCRemoteSwiftPackageReference "SwiftLlama" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18C98C3C2EDEB5FC0064BACA /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18C98C542EDEBF140064BACA /* XCRemoteSwiftPackageReference "SwiftLlama" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ShenghaiWang/SwiftLlama.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18C98C552EDEBF140064BACA /* SwiftLlama */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C98C542EDEBF140064BACA /* XCRemoteSwiftPackageReference "SwiftLlama" */;
+			productName = SwiftLlama;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18C98C332EDEB5FC0064BACA /* Project object */;
 }
