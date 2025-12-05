@@ -96,43 +96,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Helpers: makeInt32MLArray + MLMultiArray -> [Float] extension
-
-/// Build MLMultiArray of Int32 with shape [1, seqLen]
-func makeInt32MLArray(from values: [Int], seqLen: Int) throws -> MLMultiArray {
-    let shape: [NSNumber] = [1, NSNumber(value: seqLen)]
-    let ml = try MLMultiArray(shape: shape, dataType: .int32)
-    // Fill sequentially (MLMultiArray uses flat indexing)
-    for i in 0..<seqLen {
-        let v = Int32(values[i])
-        let num = NSNumber(value: v)
-        ml[i] = num
-    }
-    return ml
-}
-
-extension MLMultiArray {
-    /// Convert MLMultiArray (float32 or double) to [Float]
-    func toFloatArray() -> [Float] {
-        let count = self.count
-        var result = [Float](repeating: 0, count: count)
-        switch self.dataType {
-        case .float32:
-            let ptr = UnsafeMutableRawPointer(self.dataPointer).assumingMemoryBound(to: Float.self)
-            for i in 0..<count { result[i] = ptr[i] }
-        case .double:
-            let ptr = UnsafeMutableRawPointer(self.dataPointer).assumingMemoryBound(to: Double.self)
-            for i in 0..<count { result[i] = Float(ptr[i]) }
-        case .int32:
-            let ptr = UnsafeMutableRawPointer(self.dataPointer).assumingMemoryBound(to: Int32.self)
-            for i in 0..<count { result[i] = Float(ptr[i]) }
-        default:
-            for i in 0..<count { result[i] = self[i].floatValue }
-        }
-        return result
-    }
-}
-
 // MARK: - Preview
 #Preview {
     ContentView()
